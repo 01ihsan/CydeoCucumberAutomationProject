@@ -17,10 +17,6 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 
-    public static void verifyURLContains(String expected) {
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expected));
-    }
-
     public static List<String> dropdownOptionsAsString(WebElement dropdownElement) {
         Select select = new Select(dropdownElement);
         List<WebElement> actualOptionsAsWebElement = select.getOptions();
@@ -29,12 +25,5 @@ public class BrowserUtils {
             actualOptionsAsString.add(each.getText());
         }
         return actualOptionsAsString;
-    }
-
-    public static void clickRadioButtonWithName(List<WebElement> radioButtonsList, String radioValue) {
-        for (WebElement each : radioButtonsList) {
-            if (each.getAttribute("value").equalsIgnoreCase(radioValue))
-                each.click();
-        }
     }
 }

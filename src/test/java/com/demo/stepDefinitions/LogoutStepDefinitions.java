@@ -29,7 +29,7 @@ public class LogoutStepDefinitions {
 
     @And("user selects the logout from dropdown menu")
     public void userSelectsTheLogoutFromDropdownMenu() {
-
+        basePage.logoutButton.click();
     }
 
     @Then("user should be able to logout")
