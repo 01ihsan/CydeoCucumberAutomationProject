@@ -48,4 +48,3 @@ Feature: FinWorksERP app login feature
       |                         | salesmanager  |
       |                         | 123456        |
       | 123@456.com             |               |
-

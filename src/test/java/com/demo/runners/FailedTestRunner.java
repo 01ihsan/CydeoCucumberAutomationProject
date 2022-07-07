@@ -9,6 +9,5 @@ import org.junit.runner.RunWith;
         glue = "com/cydeo/step_definitions",
         features = "@target/reRun.txt"
 )
-
 public class FailedTestRunner {
 }
