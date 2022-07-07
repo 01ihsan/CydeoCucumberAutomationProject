@@ -6,7 +6,7 @@ Feature: FinWorksERP app logout feature
   Background:
     Given user is already logged-in with "salesmanager20@info.com" and "salesmanager"
 
-    Scenario:
+    Scenario:Testing logout function.
       When user clicks on the username field
       And user selects the logout from dropdown menu
       Then user should be able to logout
