@@ -1,4 +1,4 @@
-@wip
+
 Feature: FinWorksERP app login feature
   User Story:
   As a user,
