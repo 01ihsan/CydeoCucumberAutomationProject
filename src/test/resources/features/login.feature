@@ -1,12 +1,15 @@
 Feature: FinWorksERP app login feature
-  User Story:
-  As a user,
-  I should be able to login with correct credentials.
+  User Story,
+  User should be able to login.
+  Acceptance Criteria
+  1. User should be able to login with valid credentials.
+  2. User shouldn't be able to login with invalid credentials and get error message.
+  4. User shouldn't be able to login with empty credentials.
 
   Background: for the scenarios in the feature file, user is expected to be on login page
     Given user is on the login page
 
-  Scenario Outline: Positive Test Cases
+  Scenario Outline: User should be able to login with valid credentials.
     When user enters "<ValidUserName>"
     And user types "<ValidUserPassword>"
     And user clicks login button
@@ -18,7 +21,7 @@ Feature: FinWorksERP app login feature
       | posmanager20@info.com      | posmanager        |
       | expensesmanager20@info.com | expensesmanager   |
 
-  Scenario Outline: Login with invalid Credentials
+  Scenario Outline: 2. User shouldn't be able to login with invalid credentials and get error message.
     When user enters "<InvalidUserName>"
     And user types "<InvalidUserPassword>"
     And user clicks login button
@@ -32,7 +35,7 @@ Feature: FinWorksERP app login feature
       | manuf_user10             | asdasasfsfa         |
       | salesmanager10@info.com  | manager             |
 
-  Scenario Outline: Login with empty Credentials
+  Scenario Outline: User shouldn't be able to login with empty credentials.
     When user enters "<EmptyUsername>"
     And user types "<EmptyPassword>"
     And user clicks login button
