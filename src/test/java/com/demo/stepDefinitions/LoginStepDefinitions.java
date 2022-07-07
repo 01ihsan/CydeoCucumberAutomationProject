@@ -41,11 +41,16 @@ public class LoginStepDefinitions {
 
     @Then("user should be able to see {string} on the upper right corner")
     public void userShouldBeAbleToSeeOnTheUpperRightCorner(String arg0) {
-        Assert.assertEquals(arg0, basePage.UserName.getText());
+        Assert.assertEquals(arg0.split("@")[0].toLowerCase(), basePage.UserName.getText().toLowerCase());
     }
 
     @Then("user shouldn't be able to login")
     public void userShouldnTBeAbleToLogin() {
         Assert.assertTrue(loginPage.loginButton.isDisplayed());
+    }
+
+    @Then("user should get Wrong login-password message")
+    public void userShouldGetWrongLoginPasswordMessage() {
+        Assert.assertTrue(loginPage.warningMessage.isDisplayed());
     }
 }
