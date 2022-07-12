@@ -21,11 +21,13 @@ public class LoginStepDefinitions {
 
     @When("user enters {string}")
     public void userEntersUserName(String userName) {
+        loginPage.userNameBox.clear();
         loginPage.userNameBox.sendKeys(userName);
     }
 
     @And("user types {string}")
     public void userTypes(String password) {
+        loginPage.passwordBox.clear();
         loginPage.passwordBox.sendKeys(password);
     }
 
