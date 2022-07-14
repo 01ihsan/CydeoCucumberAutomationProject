@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/demo/stepDefinitions",
-        dryRun = false//, //turns of the step_definitions. It will get only snippets.
-        //tags = "@wip"
+        dryRun = false, //turns of the step_definitions. It will get only snippets.
+        tags = "@wip"
 )
 public class CukesRunner {
 }

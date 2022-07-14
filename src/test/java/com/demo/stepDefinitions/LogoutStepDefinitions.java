@@ -17,7 +17,9 @@ public class LogoutStepDefinitions {
     @Given("user is already logged-in with {string} and {string}")
     public void userIsAlreadyLoggedInWithAnd(String userName, String password) {
         Driver.getDriver().get(ConfigurationReader.getProperty("webSite"));
+        loginPage.userNameBox.clear();
         loginPage.userNameBox.sendKeys(userName);
+        loginPage.passwordBox.clear();
         loginPage.passwordBox.sendKeys(password);
         loginPage.loginButton.click();
     }
